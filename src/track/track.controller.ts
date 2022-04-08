@@ -33,9 +33,14 @@ export class TrackController{
 
   @Get('/search')
   search(
-    @Query('search') search: string
+    @Query('query') query: string
   ){
-    return this.trackService.search(search)
+
+    if(!query.length){
+      return []
+    }
+
+    return this.trackService.search(query)
   }
 
   @Get(':id')

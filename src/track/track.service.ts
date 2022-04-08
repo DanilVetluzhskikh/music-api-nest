@@ -20,7 +20,7 @@ export class TrackService{
     const audioPath = this.fileService.createFile(FileType.AUDIO, audio)
     const imagePath = this.fileService.createFile(FileType.IMAGE, picture)
 
-    return await this.trackModel.create({ ...dto, listens: 0, audio: audioPath, picture: imagePath })
+    return await this.trackModel.create({ ...dto, listens: 0, comments: [], audio: audioPath, picture: imagePath })
   }
 
   async getAll(
