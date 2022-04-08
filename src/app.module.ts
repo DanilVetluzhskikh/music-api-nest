@@ -4,7 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static'
 import { FileModule } from './file/file.module'
 import { TrackModule } from './track/track.module'
 import * as path from 'path'
-import { MONGODB_URL } from './security'
+import { MONGODB_URL } from '../security'
 
 @Module({
   imports: [
